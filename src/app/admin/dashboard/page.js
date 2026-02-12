@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FaPlus, FaSave, FaTimes } from 'react-icons/fa';
 import ProductCard from '@/components/ProductCard';
 import { useProducts } from '@/hooks/useProducts';
+import toast from 'react-hot-toast';
 
 export default function DashboardPage() {
   const { products, addProduct, updateProduct, deleteProduct } = useProducts();
@@ -20,6 +21,19 @@ export default function DashboardPage() {
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       deleteProduct(id);
+      toast.success('Product deleted successfully! 🗑️', {
+        position: 'bottom-center',
+        duration: 2000,
+        style: {
+          background: '#ef4444',
+          color: '#fff',
+          padding: '12px 16px',
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontWeight: '500',
+        },
+        icon: '🗑️',
+      });
     }
   };
 
@@ -62,9 +76,35 @@ export default function DashboardPage() {
     if (editingProduct) {
       // Edit existing product
       updateProduct(editingProduct.id, formData);
+      toast.success('Product updated successfully! ✏️', {
+        position: 'bottom-center',
+        duration: 2000,
+        style: {
+          background: '#3b82f6',
+          color: '#fff',
+          padding: '12px 16px',
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontWeight: '500',
+        },
+        icon: '✏️',
+      });
     } else {
       // Add new product
       addProduct(formData);
+      toast.success('Product added successfully! 🎉', {
+        position: 'bottom-center',
+        duration: 2000,
+        style: {
+          background: '#10b981',
+          color: '#fff',
+          padding: '12px 16px',
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontWeight: '500',
+        },
+        icon: '🎉',
+      });
     }
     
     setIsModalOpen(false);
@@ -141,7 +181,7 @@ export default function DashboardPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                       placeholder="e.g., Chocolate Cake"
                     />
                   </div>
@@ -159,7 +199,7 @@ export default function DashboardPage() {
                       required
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                       placeholder="e.g., 15.99"
                     />
                   </div>
@@ -175,7 +215,7 @@ export default function DashboardPage() {
                       value={formData.ingredients}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                       placeholder="e.g., Flour, Sugar, Eggs"
                     />
                   </div>
@@ -190,11 +230,12 @@ export default function DashboardPage() {
                       name="image"
                       value={formData.image}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                       placeholder="https://example.com/image.jpg"
                     />
                     <p className="text-xs text-gray-500 mt-1">
-                      Leave empty for default image      </p>
+                      Leave empty for default image
+                    </p>
                   </div>
                 </div>
 
