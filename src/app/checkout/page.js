@@ -232,7 +232,7 @@ export default function Checkout() {
                           value={shippingInfo.fullName}
                           onChange={handleShippingChange}
                           required
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                           placeholder="John Doe"
                         />
                       </div>
@@ -253,7 +253,7 @@ export default function Checkout() {
                           value={shippingInfo.email}
                           onChange={handleShippingChange}
                           required
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                           placeholder="john@example.com"
                         />
                       </div>
@@ -274,7 +274,7 @@ export default function Checkout() {
                           value={shippingInfo.phone}
                           onChange={handleShippingChange}
                           required
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                           placeholder="+1 234 567 8900"
                         />
                       </div>
@@ -295,7 +295,7 @@ export default function Checkout() {
                           value={shippingInfo.address}
                           onChange={handleShippingChange}
                           required
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                           placeholder="123 Main St"
                         />
                       </div>
@@ -316,7 +316,7 @@ export default function Checkout() {
                           value={shippingInfo.city}
                           onChange={handleShippingChange}
                           required
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                           placeholder="New York"
                         />
                       </div>
@@ -333,7 +333,7 @@ export default function Checkout() {
                         value={shippingInfo.state}
                         onChange={handleShippingChange}
                         required
-                        className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                        className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                         placeholder="NY"
                       />
                     </div>
@@ -349,7 +349,7 @@ export default function Checkout() {
                         value={shippingInfo.zipCode}
                         onChange={handleShippingChange}
                         required
-                        className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                        className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                         placeholder="10001"
                       />
                     </div>
@@ -368,12 +368,12 @@ export default function Checkout() {
                           value={shippingInfo.country}
                           onChange={handleShippingChange}
                           required
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900"
                         >
-                          <option>United States</option>
-                          <option>Canada</option>
-                          <option>United Kingdom</option>
-                          <option>Australia</option>
+                          <option className="text-gray-900">United States</option>
+                          <option className="text-gray-900">Canada</option>
+                          <option className="text-gray-900">United Kingdom</option>
+                          <option className="text-gray-900">Australia</option>
                         </select>
                       </div>
                     </div>
@@ -410,12 +410,12 @@ export default function Checkout() {
                       <label className="flex items-center gap-2 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
                         <input type="radio" name="paymentMethod" defaultChecked className="text-indigo-600" />
                         <FaCcVisa size={24} className="text-blue-600" />
-                        <span className="text-sm font-medium">Credit Card</span>
+                        <span className="text-sm font-medium text-gray-700">Credit Card</span>
                       </label>
                       <label className="flex items-center gap-2 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
                         <input type="radio" name="paymentMethod" className="text-indigo-600" />
                         <FaCcPaypal size={24} className="text-blue-800" />
-                        <span className="text-sm font-medium">PayPal</span>
+                        <span className="text-sm font-medium text-gray-700">PayPal</span>
                       </label>
                     </div>
                   </div>
@@ -438,7 +438,7 @@ export default function Checkout() {
                           required
                           maxLength="16"
                           placeholder="1234 5678 9012 3456"
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                         />
                       </div>
                     </div>
@@ -459,7 +459,7 @@ export default function Checkout() {
                           onChange={handlePaymentChange}
                           required
                           placeholder="John Doe"
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                         />
                       </div>
                     </div>
@@ -481,7 +481,7 @@ export default function Checkout() {
                           required
                           placeholder="MM/YY"
                           maxLength="5"
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                         />
                       </div>
                     </div>
@@ -503,7 +503,7 @@ export default function Checkout() {
                           required
                           maxLength="4"
                           placeholder="123"
-                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 placeholder-gray-500"
                         />
                       </div>
                     </div>
@@ -558,13 +558,13 @@ export default function Checkout() {
                     <FaTruck className="text-indigo-600" />
                     Shipping Address
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-800">
                     {shippingInfo.fullName}<br />
                     {shippingInfo.address}<br />
                     {shippingInfo.city}, {shippingInfo.state} {shippingInfo.zipCode}<br />
                     {shippingInfo.country}
                   </p>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-800 mt-2">
                     <span className="font-medium">Email:</span> {shippingInfo.email}<br />
                     <span className="font-medium">Phone:</span> {shippingInfo.phone}
                   </p>
@@ -576,7 +576,7 @@ export default function Checkout() {
                     <FaCreditCard className="text-indigo-600" />
                     Payment Method
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-800">
                     Card ending in {paymentInfo.cardNumber?.slice(-4)}<br />
                     {paymentInfo.cardName}
                   </p>
@@ -591,7 +591,7 @@ export default function Checkout() {
                   <div className="space-y-3">
                     {cart.map((item) => (
                       <div key={item.id} className="flex justify-between text-sm">
-                        <span className="text-gray-600">
+                        <span className="text-gray-700">
                           {item.name} × {item.qty}
                         </span>
                         <span className="font-medium text-gray-900">
@@ -656,7 +656,7 @@ export default function Checkout() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-sm font-medium text-gray-900">{item.name}</h3>
-                      <p className="text-xs text-gray-500">Qty: {item.qty}</p>
+                      <p className="text-xs text-gray-600">Qty: {item.qty}</p>
                       <p className="text-sm font-semibold text-indigo-600">
                         ${(item.price * item.qty).toFixed(2)}
                       </p>
@@ -667,19 +667,19 @@ export default function Checkout() {
 
               {/* Price Breakdown */}
               <div className="space-y-2 text-sm border-t border-gray-200 pt-4">
-                <div className="flex justify-between text-gray-600">
+                <div className="flex justify-between text-gray-700">
                   <span>Subtotal</span>
-                  <span className="font-medium">${subtotal.toFixed(2)}</span>
+                  <span className="font-medium text-gray-900">${subtotal.toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between text-gray-600">
+                <div className="flex justify-between text-gray-700">
                   <span>Shipping</span>
-                  <span className="font-medium">
+                  <span className="font-medium text-gray-900">
                     {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
                   </span>
                 </div>
-                <div className="flex justify-between text-gray-600">
+                <div className="flex justify-between text-gray-700">
                   <span>Tax (10%)</span>
-                  <span className="font-medium">${tax.toFixed(2)}</span>
+                  <span className="font-medium text-gray-900">${tax.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-lg font-bold text-gray-900 pt-2 border-t border-gray-200 mt-2">
                   <span>Total</span>
@@ -689,15 +689,15 @@ export default function Checkout() {
 
               {/* Secure Checkout Badge */}
               <div className="mt-6 pt-6 border-t border-gray-200">
-                <div className="flex items-center gap-2 text-sm text-gray-600">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <FaLock className="text-green-600" />
                   <span>Secure SSL Encrypted Checkout</span>
                 </div>
                 <div className="flex justify-center gap-3 mt-4">
-                  <FaCcVisa size={32} className="text-gray-400" />
-                  <FaCcMastercard size={32} className="text-gray-400" />
-                  <FaCcAmex size={32} className="text-gray-400" />
-                  <FaCcPaypal size={32} className="text-gray-400" />
+                  <FaCcVisa size={32} className="text-gray-500" />
+                  <FaCcMastercard size={32} className="text-gray-500" />
+                  <FaCcAmex size={32} className="text-gray-500" />
+                  <FaCcPaypal size={32} className="text-gray-500" />
                 </div>
               </div>
             </div>

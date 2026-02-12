@@ -194,8 +194,7 @@ export default function DashboardPage() {
                       placeholder="https://example.com/image.jpg"
                     />
                     <p className="text-xs text-gray-500 mt-1">
-                      Leave empty for default image
-                    </p>
+                      Leave empty for default image      </p>
                   </div>
                 </div>
 

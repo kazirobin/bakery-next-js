@@ -37,12 +37,12 @@ export default function OrderConfirmationPage() {
             View Orders
           </span>
           
-          <span 
+          <Link 
             href="/"
             className="block w-full bg-white text-gray-700 px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
           >
             Continue Shopping
-          </span>
+          </Link>
         </div>
       </div>
     </div>
