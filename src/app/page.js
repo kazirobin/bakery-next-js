@@ -7,7 +7,7 @@ export default function Home() {
   const { products } = useProducts();
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container  px-4 py-8 bg-gradient-to-r from-amber-800 to-amber-900 ">
       <h1 className="text-3xl font-bold text-gray-900 mb-8">Our Products</h1>
       <div
         className="grid gap-6 

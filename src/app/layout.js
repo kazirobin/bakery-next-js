@@ -8,10 +8,10 @@ import { Toaster } from "react-hot-toast";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body  className="container mx-auto">
         <CartProvider>
           <Header />
-          <main className="p-6">{children}</main>
+          <main>{children}</main>
           <Footer />
         </CartProvider>
 
