@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Bakery Info Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-serif font-bold text-amber-800">
-              Sweet<span className="text-amber-600">Bakery</span>
+              ABC<span className="text-amber-600">Bakery</span>
             </h3>
             <p className="text-amber-700 text-sm leading-relaxed">
               Crafting delicious memories since 1995. We bake with love using traditional recipes and the finest ingredients.
@@ -110,7 +110,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-amber-700">
               <div className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-amber-600" />
-                <span>123 Bakery Street, Sweet City, SC 12345</span>
+                <span>123 Bakery Street, ABC City, SC 12345</span>
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhone className="flex-shrink-0 text-amber-600" />
@@ -145,7 +145,7 @@ export default function Footer() {
         <div className="border-t border-amber-200 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-amber-700">
-              © {currentYear} SweetBakery. All rights reserved.
+              © {currentYear} ABCBakery. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy-policy" className="text-amber-700 hover:text-amber-900 transition-colors">

@@ -9,7 +9,7 @@ export default function Header() {
     <nav className="bg-black text-white px-6 py-4 flex justify-between items-center">
       {/* Logo */}
       <Link href="/" className="text-xl font-bold">
-        Sweet Bakery
+        ABC Bakery
       </Link>
 
       {/* Links */}
